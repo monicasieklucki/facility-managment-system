@@ -1,18 +1,10 @@
 package com.facility.model.facility;
 
-import java.util.List;
-import java.util.ArrayList;
-
-import com.facility.model.facility.*;
-
 public class Facility {
 		
 	private Integer facilityId;
 	private FacilityDetail facilityDetail;
 	private FacilityLocation facilityLocation;
-	
-    //private List<Facility> facilityList = new ArrayList<Facility>();
-
 	
 	public Facility() {}
 
@@ -40,16 +32,4 @@ public class Facility {
 		this.facilityLocation = facilityLocation;
 	}
 	
-	
-	// move to manager
-	//public void addFacility(Facility facility)
-	//{
-	//    facilityList.add(facility);
-	//}
-	       
-	//public void removeFacility(Facility facility)
-	//{
-	//    facilityList.remove(facility);
-	//}
-
 }

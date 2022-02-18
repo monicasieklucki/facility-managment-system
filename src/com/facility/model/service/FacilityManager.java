@@ -52,13 +52,14 @@ public class FacilityManager {
 	}
 	
 	//Add FacilityDetail
-	public void addFacilityDetail(Facility facility, String name) {
+	public void addFacilityDetail(Facility facility, String name, Integer capacity) {
 		try {
 			for (Facility f: facilityList) {
 				if (f.getFacilityId().equals(facility.getFacilityId())) {
 					
 					FacilityDetail facilityDetail = new FacilityDetail();
 					facilityDetail.setName(name);
+					facilityDetail.setCapacity(capacity);
 					
 					f.setFacilityDetail(facilityDetail);
 				}
