@@ -59,7 +59,7 @@ public class FacilityManager {
 					
 					FacilityDetail facilityDetail = new FacilityDetail();
 					facilityDetail.setName(name);
-					facilityDetail.setCapacity(capacity);
+					facilityDetail.setMaxCapacity(capacity);
 					
 					f.setFacilityDetail(facilityDetail);
 				}
@@ -83,5 +83,16 @@ public class FacilityManager {
 	    }
 	}
 	
+	public Integer requestAvailableCapacity(Facility facility) {
+		
+		try {
+		    int availableCapacity = facility.getFacilityDetail().getMaxCapacity() - facility.getFacilityDetail().getCurrCapacity();
+		    return availableCapacity;
+		} catch (Exception se) {
+		    System.err.println("FacilityManager: Threw an exception getting available facility capacity.");
+		    System.err.println(se.getMessage());			
+		}
+		return null;
+	}	
 
 }

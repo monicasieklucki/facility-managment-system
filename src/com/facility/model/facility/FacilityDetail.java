@@ -3,7 +3,8 @@ package com.facility.model.facility;
 public class FacilityDetail {
 	
 	private String name;
-	private Integer capacity;
+	private Integer maxCapacity;
+	private Integer currCapacity;
 
 	public FacilityDetail() {}
 	
@@ -19,12 +20,20 @@ public class FacilityDetail {
 		this.name = name;
 	}
 
-	public Integer getCapacity() {
-		return capacity;
+	public Integer getMaxCapacity() {
+		return maxCapacity;
 	}
 
-	public void setCapacity(Integer capacity) {
-		this.capacity = capacity;
+	public void setMaxCapacity(Integer maxCapacity) {
+		this.maxCapacity = maxCapacity;
+	}
+	
+	public Integer getCurrCapacity() {
+		return currCapacity;
+	}
+
+	public void setCurrCapacity(Integer currCapacity) {
+		this.currCapacity = currCapacity;
 	}
 	
 }
