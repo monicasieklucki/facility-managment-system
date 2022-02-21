@@ -4,7 +4,7 @@ public class FacilityDetail {
 	
 	private String name;
 	private Integer maxCapacity;
-	private Integer currCapacity;
+	private Integer currCapacity = 0;
 
 	public FacilityDetail() {}
 	

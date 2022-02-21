@@ -43,11 +43,10 @@ public class FacilityClient {
 		System.out.println(manager.listFacilities());
 		
 		//requestAvailableCapacity() <- maybe the number of rooms in a facility
+		int availableCapacity = manager.requestAvailableCapacity(facility1);
+		System.out.println(availableCapacity);
 		
 		// Facility Use Client
-		
-		
-		
 		
 		
 		
