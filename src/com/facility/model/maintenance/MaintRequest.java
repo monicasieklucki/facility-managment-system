@@ -48,6 +48,4 @@ public class MaintRequest {
 		this.endDate = endDate;
 	}
 	
-	
-
 }

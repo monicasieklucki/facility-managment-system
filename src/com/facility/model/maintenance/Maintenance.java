@@ -9,6 +9,15 @@ public class Maintenance {
 
 	Maintenance() {}
 	
+	public void makeFacilityMaintRequest(MaintRequest request) {
+		try {
+			
+		} catch (Exception se) {
+  	        System.err.println("Maintenance: Threw an Exception making maintenance request.");
+  	        System.err.println(se.getMessage());
+		}
+	}
+	
 	
 
 }

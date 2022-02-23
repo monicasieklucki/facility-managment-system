@@ -2,12 +2,11 @@ package com.facility.model.use;
 
 import com.facility.model.facility.*;
 
-public class Use {
-	
-	
+public class Use implements IUse {
+
 	public Use() { }
 	
-	// TODO
+	// TODO - not sure what to add for is in use.
 	public boolean isInUseDuringInterval() {
     	try {
 

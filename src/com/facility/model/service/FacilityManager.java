@@ -6,17 +6,19 @@ import com.facility.model.facility.*;
 
 public class FacilityManager {
 	
-	// create Facility DAO 
+	// create Facility DAOs here
 	
-	// saving facilities in memory
+	
+	// saving facilities in memory instead
     private List<Facility> facilityList = new ArrayList<Facility>();
     
     public FacilityManager() {}
 	
-    // get all facilities
+    // get all facilities from db
     public List<Facility> listFacilities() {
     	try {
     		return facilityList;
+    		//facilityDAO.GetFacilitiesList
     	} catch (Exception se) {
   	        System.err.println("FacilityManager: Threw an Exception getting facilities.");
   	        System.err.println(se.getMessage());
@@ -24,22 +26,8 @@ public class FacilityManager {
     	return null;
     }
     
-    public Facility getFacilityInformation(Integer facilityId) {
-    	try {
-    		for (Facility facility: facilityList) {
-    			if (facility.getFacilityId().equals(facilityId)) {
-    				return facility;
-    			}
-    			
-    		}
-    	} catch(Exception se) {
-  	        System.err.println("FacilityManager: Threw an Exception getting facility information.");
-  	        System.err.println(se.getMessage());
-    	}
-    	return null;
-    }
     
-	//Insert a new facility in the DB
+	// insert a new facility in the DB
 	public void addNewFacility(Facility facility) {
 		
 		try {
@@ -51,7 +39,7 @@ public class FacilityManager {
 	    }
 	}
 	
-	//Add FacilityDetail
+	// add FacilityDetail
 	public void addFacilityDetail(Facility facility, String name, Integer capacity) {
 		try {
 			for (Facility f: facilityList) {
@@ -72,7 +60,7 @@ public class FacilityManager {
 	    }
 	}
 	
-	//Insert a new facility in the DB
+	// insert a new facility in the DB
 	public void removeFacility(Facility facility) {
 		
 		try {
@@ -82,17 +70,5 @@ public class FacilityManager {
 	      System.err.println(se.getMessage());
 	    }
 	}
-	
-	public Integer requestAvailableCapacity(Facility facility) {
-		
-		try {
-		    int availableCapacity = facility.getFacilityDetail().getMaxCapacity() - facility.getFacilityDetail().getCurrCapacity();
-		    return availableCapacity;
-		} catch (Exception se) {
-		    System.err.println("FacilityManager: Threw an exception getting available facility capacity.");
-		    System.err.println(se.getMessage());			
-		}
-		return null;
-	}	
 
 }

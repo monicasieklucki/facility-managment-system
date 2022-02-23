@@ -6,7 +6,7 @@ import com.facility.model.facility.Facility;
 
 import java.util.ArrayList;
 
-public class Inspection {
+public class Inspection implements IInspection {
 
 	// saving facilities in memory
     private List<String> inspectionsList = new ArrayList<String>();
@@ -14,7 +14,7 @@ public class Inspection {
     public Inspection() {}
 	
     // get all inspections
-    // facilities have the same inspection dates
+    // all facilities have the same inspection dates  ??? Get inspection dates by facility
     public List<String> listInspections() {
     	try {
     		inspectionsList.add("02/20/2022");
