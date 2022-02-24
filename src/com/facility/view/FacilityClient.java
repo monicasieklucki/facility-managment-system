@@ -1,7 +1,6 @@
 package com.facility.view;
 
 import java.util.List;
-import java.util.ArrayList;
 
 import com.facility.model.facility.Facility;
 import com.facility.model.facility.FacilityInformation;
@@ -13,7 +12,9 @@ public class FacilityClient {
 	public static void main (String args[]) throws Exception {
 		
 		//Facility Client
-		
+				
+		// the manager is the service that connects to the dal
+		// dal actually retrieves, inserts etc the objects from the db
 		FacilityManager manager = new FacilityManager();
 				
 		System.out.println("List of facilities should be empty.");
@@ -42,19 +43,22 @@ public class FacilityClient {
 		
 		System.out.println("Listing only one facility.");
 		System.out.println(manager.listFacilities());
-		List<Facility> facilities = manager.listFacilities();
+		
+		// retrieving this from the "database"
+		Facility retrieved_facility = manager.getFacilityInformation(1);
+		
+		
 		
 		
 		System.out.println("Getting facility information.");
 		IFacilityInformation facilityInfo = new FacilityInformation();
-		
-		Facility facility = facilityInfo.getFacilityInformation(1, facilities);
+			
 				
+		// interface that deals with getting capacity in a facility
+		// 
 		//requestAvailableCapacity() <- maybe the number of rooms in a facility
-		int availableCapacity = facilityInfo.requestAvailableCapacity(facility);
+		int availableCapacity = facilityInfo.requestAvailableCapacity(retrieved_facility);
 		System.out.println(availableCapacity);
-				
-		
 		
 	}
 }

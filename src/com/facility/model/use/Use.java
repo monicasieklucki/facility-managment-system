@@ -6,7 +6,7 @@ public class Use implements IUse {
 
 	public Use() { }
 	
-	// TODO - not sure what to add for is in use.
+	// TODO - not sure how to handle intervals for is in use
 	public boolean isInUseDuringInterval() {
     	try {
 

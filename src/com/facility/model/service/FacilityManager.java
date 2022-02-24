@@ -8,7 +8,6 @@ public class FacilityManager {
 	
 	// create Facility DAOs here
 	
-	
 	// saving facilities in memory instead
     private List<Facility> facilityList = new ArrayList<Facility>();
     
@@ -24,6 +23,16 @@ public class FacilityManager {
   	        System.err.println(se.getMessage());
     	}
     	return null;
+    }
+    
+	// get facility information here	
+    public Facility getFacilityInformation(Integer facilityId) {
+		for (Facility facility: facilityList) {
+			if (facility.getFacilityId().equals(facilityId)) {
+				return facility;
+			}	
+		}
+		return null;
     }
     
     

@@ -2,16 +2,14 @@ package com.facility.model.use;
 
 import java.util.List;
 
-import com.facility.model.facility.Facility;
-
 import java.util.ArrayList;
 
-public class Inspection implements IInspection {
+public class Inspection {
 
 	// saving facilities in memory
     private List<String> inspectionsList = new ArrayList<String>();
-    
-    public Inspection() {}
+        
+    // table in database 
 	
     // get all inspections
     // all facilities have the same inspection dates  ??? Get inspection dates by facility
