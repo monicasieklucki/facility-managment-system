@@ -36,7 +36,7 @@ public class MaintenanceManager {
 	}
     
     // set maintenance request to scheduled
-    // updating request
+    // updating request in "DB"
 	public void scheduleMaintenance(MaintRequest maintenance) {
 		try {		
 			maintenance.setStatus("Scheduled");
@@ -56,8 +56,5 @@ public class MaintenanceManager {
 		}
 		return null;
 	}
-	
-
-	
 
 }

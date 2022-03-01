@@ -8,13 +8,17 @@ import com.facility.model.facility.Facility;
 public class UseManager {
 	
 	// saving facilities in memory instead
-    private List<Facility> inspectionList = new ArrayList<Facility>();
+    private List<String> inspectionList = new ArrayList<String>();
     
     public UseManager() {}
 	
     // get all inspections from db
-    public List<Facility> listInspections() {
+    // right now, all facilities have the same inspection dates
+    public List<String> listInspections() {
     	try {
+    		inspectionList.add("02/23/2022");
+    		inspectionList.add("08/10/2022");
+
     		return inspectionList;
     		//facilityDAO.GetFacilitiesList
     	} catch (Exception se) {

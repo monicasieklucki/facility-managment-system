@@ -10,35 +10,61 @@ public class Maintenance implements IMaintenance {
 	
 	Maintenance() {}
 		
-	public void calcMaintenanceCostForFacility(Facility facility, List<MaintRequest> maintList) {
-		try {			
+	public Integer calcMaintenanceCostForFacility(Facility facility, List<MaintRequest> maintList) {
+		Integer maintenanceCostForFacility = 0;
+		try {	
+			
+			for (MaintRequest request: maintList) {
+				if (request.getFacility().getFacilityId().equals(facility.getFacilityId())) {
+					maintenanceCostForFacility += request.getCost();
+				}
+			}				
 
 		} catch (Exception se) {
   	        System.err.println("Maintenance: Threw an Exception making maintenance request.");
   	        System.err.println(se.getMessage());
 		}
+		return maintenanceCostForFacility;
+
 	}
 	
-	
-	public void calcProblemRateForFacility(Facility facility, List<MaintRequest> maintRequestList) {
+	public Float calcProblemRateForFacility(Facility facility, List<MaintRequest> maintRequestList) {
+		
+		Integer totalNumProblems = 0;
+		Integer facilityNumProblems = 0;
+		
 		try {			
+			for (MaintRequest request: maintRequestList) {
+				if (request.getFacility().getFacilityId().equals(facility.getFacilityId())) {
+					
+					facilityNumProblems += facility.getFacilityDetail().getProblems().size();
+				}
+				facilityNumProblems += request.getFacility().getFacilityDetail().getProblems().size();
+
+			}	
 
 		} catch (Exception se) {
   	        System.err.println("Maintenance: Threw an Exception making maintenance request.");
   	        System.err.println(se.getMessage());
 		}
+		
+		return (float) totalNumProblems / facilityNumProblems;
 	}
 	
-	public void calcDownTimeForFacility(Facility facility, List<MaintRequest> maintRequestList) {
+	public Float calcDownTimeForFacility(Facility facility, List<MaintRequest> maintRequestList) {
+		
+		// TODO
+		Float facilityDownTime = (float) 0;
 		try {			
 			//maintRequestList.add(request);
 		} catch (Exception se) {
   	        System.err.println("Maintenance: Threw an Exception making maintenance request.");
   	        System.err.println(se.getMessage());
 		}
+		return facilityDownTime;
 	}
 	
-	public List<String> listFacilityProblems(Facility facility, List<MaintRequest> maintRequestList) {
+	public List<String> listFacilityProblems(Facility facility) {
 		try {			
 			return facility.getFacilityDetail().getProblems();
 		} catch (Exception se) {

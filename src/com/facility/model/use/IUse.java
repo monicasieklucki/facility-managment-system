@@ -14,6 +14,6 @@ public interface IUse {
 	
 	public Integer listActualUsage(Facility facility);
 	
-	public Integer calcUsageRate(Facility facility);
+	public Float calcUsageRate(Facility facility);
 
 }

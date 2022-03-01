@@ -48,8 +48,6 @@ public class FacilityClient {
 		Facility retrieved_facility = manager.getFacilityInformation(1);
 		
 		
-		
-		
 		System.out.println("Getting facility information.");
 		IFacilityInformation facilityInfo = new FacilityInformation();
 			

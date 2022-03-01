@@ -47,9 +47,9 @@ public class Use implements IUse {
     	return null;
 	}
 	
-	public Integer calcUsageRate(Facility facility) {
+	public Float calcUsageRate(Facility facility) {
     	try {
-    		return (facility.getFacilityDetail().getCurrCapacity() / facility.getFacilityDetail().getMaxCapacity()) * 100;
+    		return ((float)facility.getFacilityDetail().getCurrCapacity()) / facility.getFacilityDetail().getMaxCapacity();
     	} catch (Exception se) {
   	        System.err.println("Use: Threw an Exception calculating usage.");
   	        System.err.println(se.getMessage());

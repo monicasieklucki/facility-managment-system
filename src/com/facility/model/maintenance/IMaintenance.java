@@ -6,10 +6,10 @@ import com.facility.model.facility.Facility;
 
 public interface IMaintenance {	
 	
-	public void calcMaintenanceCostForFacility(Facility facility, List<MaintRequest> maintRequestList);
+	public Integer calcMaintenanceCostForFacility(Facility facility, List<MaintRequest> maintRequestList);
 	
-	public void calcProblemRateForFacility(Facility facility, List<MaintRequest> maintRequestList);
+	public Float calcProblemRateForFacility(Facility facility, List<MaintRequest> maintRequestList);
 	
-	public void calcDownTimeForFacility(Facility facility, List<MaintRequest> maintRequestList);	
+	public Float calcDownTimeForFacility(Facility facility, List<MaintRequest> maintRequestList);	
 	
 }
