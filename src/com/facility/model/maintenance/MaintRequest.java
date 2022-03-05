@@ -1,10 +1,5 @@
 package com.facility.model.maintenance;
 
-import java.util.List;
-import java.util.ArrayList;
-
-import java.time.LocalTime;
-
 import com.facility.model.facility.*;
 
 public class MaintRequest {

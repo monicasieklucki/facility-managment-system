@@ -3,9 +3,7 @@ package com.facility.model.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.facility.model.facility.Facility;
 import com.facility.model.maintenance.MaintRequest;
-import com.facility.model.maintenance.Maintenance;
 
 public class MaintenanceManager {
 	

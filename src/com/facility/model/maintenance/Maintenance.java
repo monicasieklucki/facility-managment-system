@@ -1,10 +1,7 @@
 package com.facility.model.maintenance;
 
 import java.util.List;
-import java.util.ArrayList;
-
 import com.facility.model.facility.Facility;
-import com.facility.model.maintenance.*;
 
 public class Maintenance implements IMaintenance {
 	

@@ -3,8 +3,6 @@ package com.facility.model.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.facility.model.facility.Facility;
-
 public class UseManager {
 	
 	// saving facilities in memory instead
