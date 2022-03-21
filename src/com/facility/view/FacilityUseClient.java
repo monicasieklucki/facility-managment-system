@@ -2,6 +2,11 @@ package com.facility.view;
 
 import java.util.List;
 
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import com.facility.model.facility.Facility;
 import com.facility.model.service.FacilityManager;
 import com.facility.model.service.UseManager;
@@ -10,6 +15,9 @@ import com.facility.model.use.Use;
 
 public class FacilityUseClient {
 	public static void main (String args[]) throws Exception {
+		
+        ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/app-context.xml");
+        System.out.println("***************** Application Context instantiated! ******************");
 			
 		FacilityManager facilityManager = new FacilityManager();
 				
@@ -48,5 +56,7 @@ public class FacilityUseClient {
 		System.out.println(use.listActualUsage(facility1));
 
 		
+        ((AbstractApplicationContext) context).close();
+
 	}
 }

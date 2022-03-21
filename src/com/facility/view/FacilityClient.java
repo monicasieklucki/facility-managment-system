@@ -2,7 +2,7 @@ package com.facility.view;
 
 import org.apache.log4j.BasicConfigurator;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.facility.model.facility.Facility;
@@ -19,7 +19,7 @@ public class FacilityClient {
 		//Facility Client
         ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/app-context.xml");
         System.out.println("***************** Application Context instantiated! ******************");
-				
+			
 		// the manager is the service that connects to the dal
 		// dal actually retrieves, inserts etc the objects from the db
 		
@@ -68,8 +68,7 @@ public class FacilityClient {
 		int availableCapacity = facilityInfo.requestAvailableCapacity(retrieved_facility);
 		System.out.println(availableCapacity);
 		
-		((ConfigurableApplicationContext)context).close();
+        ((AbstractApplicationContext) context).close();
 
-		
 	}
 }
