@@ -35,9 +35,14 @@
 		<list></list></property>
 </bean>
 	<bean id="maintenanceManager" class="com.facility.model.service.MaintenanceManager" scope="prototype">
-		<property name="" ref=""></property></bean>
+		<property name="maintList">
+			<list></list></property>
+		<property name="maintRequestList">
+			<list></list></property></bean>
 	<bean id="useManager" class="com.facility.model.service.UseManager" scope="prototype">
-		<property name="" ref=""></property></bean>
+		<property name="inspectionList">
+			<list></list>
+		</property></bean>
 	
 
 
