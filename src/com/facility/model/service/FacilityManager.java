@@ -2,7 +2,9 @@ package com.facility.model.service;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.facility.model.facility.*;
+import com.facility.model.facility.Facility;
+import com.facility.model.facility.FacilityDetail;
+import com.facility.model.facility.FacilityLocation;
 
 public class FacilityManager {
 	
@@ -34,8 +36,7 @@ public class FacilityManager {
 		}
 		return null;
     }
-    
-    
+        
 	// insert a new facility in the DB
 	public void addNewFacility(Facility facility) {
 		
@@ -79,5 +80,4 @@ public class FacilityManager {
 	      System.err.println(se.getMessage());
 	    }
 	}
-
 }
