@@ -34,6 +34,18 @@
         </archive>
       </configuration>
     </plugin>
+    <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>cobertura-maven-plugin</artifactId>
+        <version>2.7</version>
+        <configuration>
+            <formats>
+                <format>html</format>
+                <format>xml</format>
+            </formats>
+            <check />
+        </configuration>
+    </plugin>
   </plugins>
   </build>  
   <dependencies>
@@ -57,13 +69,16 @@
   		<artifactId>maven-assembly-plugin</artifactId>
   		<version>3.3.0</version>
   	</dependency>
-
-
-
   	<dependency>
   		<groupId>org.slf4j</groupId>
   		<artifactId>slf4j-log4j12</artifactId>
   		<version>2.0.0-alpha6</version>
   	</dependency>
-  </dependencies>
+  	<dependency>
+        <groupId>org.junit.platform</groupId>
+        <artifactId>junit-platform-launcher</artifactId>
+        <version>1.4.2</version>
+        <scope>test</scope>
+</dependency>
+  </dependencies>	
 </project>
