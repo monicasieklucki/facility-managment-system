@@ -15,6 +15,7 @@ a)
 Entity: Facility, FacilityDetail, FacilityLocation, Maintenance, MaintRequest, Use
 
 Value Object: Currently None.
+
 Services: FacilityManager, UseManager, MaintenanceManager
 
 2. Facility(Root Aggregate) -> Aggregates: FacilityDetail, FacilityLocation
