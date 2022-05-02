@@ -10,8 +10,10 @@ Project 3: A couple of simple additions have been added to include the design pa
 Class Assignment:
 a)
 
+
 1.
 Entity: Facility, FacilityDetail, FacilityLocation, Maintenance, MaintRequest, Use
+
 Value Object: Currently None.
 Services: FacilityManager, UseManager, MaintenanceManager
 
